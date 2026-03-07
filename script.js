@@ -34,13 +34,29 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', revealSection);
     revealSection(); // Trigger once on load for elements already in view
 
-    // Prevent default form submission & show alert (since no backend is attached)
+    // Form submission handler
     const form = document.querySelector('.contact-form');
-    if(form) {
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert("Thanks for your message! This is a demo template, so nothing was actually sent. Replace this with your backend logic later.");
-            form.reset();
+    const iframe = document.getElementById('hidden_iframe');
+    const popup = document.getElementById('popup-message');
+    const closePopupBtn = document.getElementById('close-popup');
+    let isSubmitting = false;
+
+    if (form && iframe && popup && closePopupBtn) {
+        form.addEventListener('submit', () => {
+            isSubmitting = true;
+        });
+
+        iframe.addEventListener('load', () => {
+            if (isSubmitting) {
+                // Form was submitted and iframe loaded
+                popup.classList.add('active');
+                form.reset();
+                isSubmitting = false;
+            }
+        });
+
+        closePopupBtn.addEventListener('click', () => {
+            popup.classList.remove('active');
         });
     }
 });

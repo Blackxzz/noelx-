@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <div class="background-effects">
         <div class="blob blob-1"></div>
@@ -34,8 +36,9 @@
             <div class="hero-content">
                 <span class="greeting">Hello, I'm</span>
                 <h1 class="title">Noel Thomas</h1>
-                <h2 class="subtitle">Creative <span class="gradient-text">Developer & Designer</span></h2>
-                <p class="description">I build beautiful, modern, and engaging digital experiences that leave a lasting impression.</p>
+                <h2 class="subtitle">Creative <span class="gradient-text">Junior Accountant & Designer</span></h2>
+                <p class="description">I build beautiful, modern, and engaging digital experiences that leave a lasting
+                    impression.</p>
                 <div class="cta-buttons">
                     <a href="#projects" class="btn btn-primary">View My Work</a>
                     <a href="#contact" class="btn btn-secondary">Contact Me</a>
@@ -58,22 +61,30 @@
                 <div class="skill-card glass-card">
                     <h3>Frontend Development</h3>
                     <p>React, Vue, HTML/CSS, JavaScript, Animations</p>
-                    <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 90%;"></div>
+                    </div>
                 </div>
                 <div class="skill-card glass-card">
                     <h3>UI/UX Design</h3>
                     <p>Figma, Adobe XD, Prototyping, Wireframing</p>
-                    <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 85%;"></div>
+                    </div>
                 </div>
                 <div class="skill-card glass-card">
                     <h3>Backend & API</h3>
                     <p>Node.js, Python, REST APIs, Databases</p>
-                    <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 75%;"></div>
+                    </div>
                 </div>
                 <div class="skill-card glass-card">
                     <h3>Creative Tools</h3>
                     <p>Photoshop, Illustrator, After Effects</p>
-                    <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 80%;"></div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -127,7 +138,8 @@
                 <div class="service-card glass-card">
                     <div class="service-icon">🎨</div>
                     <h3>UI/UX Design</h3>
-                    <p>Intuitive user interfaces and engaging experiences designed meticulously with modern aesthetics.</p>
+                    <p>Intuitive user interfaces and engaging experiences designed meticulously with modern aesthetics.
+                    </p>
                 </div>
                 <div class="service-card glass-card">
                     <div class="service-icon">🚀</div>
@@ -143,21 +155,25 @@
             <div class="contact-container glass-card">
                 <div class="contact-info">
                     <h3>Let's talk about your next project!</h3>
-                    <p>Feel free to reach out. I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
+                    <p>Feel free to reach out. I'm always open to discussing new projects, creative ideas, or
+                        opportunities to be part of your visions.</p>
                     <div class="contact-details">
                         <p>📧 contact@noelthomas.com</p>
                         <p>📍 Worldwide (Remote)</p>
                     </div>
                 </div>
-                <form class="contact-form">
+                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+                <form
+                    action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeM8tZ7B2z4pMoTNsTvz9t8EEipnGjGpoKZw4HdEZoNNjY-zQ/formResponse"
+                    method="POST" target="hidden_iframe" class="contact-form">
                     <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
+                        <input type="text" name="entry.269627982" placeholder="Your Name" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" placeholder="Your Email" required>
+                        <input type="email" name="entry.451843832" placeholder="Your Email" required>
                     </div>
                     <div class="form-group">
-                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                        <textarea name="entry.752255650" placeholder="Your Message" rows="5" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary submit-btn">Send Message</button>
                 </form>
@@ -165,10 +181,21 @@
         </section>
     </main>
 
+    <!-- Success Popup -->
+    <div id="popup-message" class="popup-overlay">
+        <div class="popup-box glass-card">
+            <div class="popup-icon">✅</div>
+            <h3>Thank You!</h3>
+            <p>Your message has been sent successfully. I'll get back to you soon.</p>
+            <button class="btn btn-primary" id="close-popup">Close</button>
+        </div>
+    </div>
+
     <footer class="footer">
         <p>&copy; 2026 Noel Thomas. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>
